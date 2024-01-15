@@ -1,12 +1,25 @@
 {
   "name": "ao3-11ty-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Starter template for creating your own fic archive ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": {
+    "name": "Ten",
+    "email": "10kph@proton.me",
+    "url": "https://10kph.neocities.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tencurse/ao3-11ty-starter.git"
+  },
+  "homepage": "https://github.com/tencurse/ao3-11ty-starter",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
 }
