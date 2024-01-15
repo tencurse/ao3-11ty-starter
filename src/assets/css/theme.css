@@ -1,0 +1,65 @@
+/* LIGHT THEME */
+html[data-theme="light"] {
+  --background-primary: #faf4ed;
+  --background-secondary: #1f1d2e;
+  --text-primary: #575279;
+  --text-secondary: #908caa;
+  --accent: #907aa9;
+
+  --color-red: #b4637a;
+  --color-yellow: #ea9d34;
+  --color-orange: #d7827e;
+  --color-green: #286983;
+  --color-blue: #56949f;
+  --color-purple: #907aa9;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-primary: #faf4ed;
+    --background-secondary: #1f1d2e;
+    --text-primary: #575279;
+    --text-secondary: #908caa;
+    --accent: #907aa9;
+
+    --color-red: #b4637a;
+    --color-yellow: #ea9d34;
+    --color-orange: #d7827e;
+    --color-green: #286983;
+    --color-blue: #56949f;
+    --color-purple: #907aa9;
+  }
+}
+
+/* DARK THEME */
+
+html[data-theme="dark"] {
+  --background-primary: #191724;
+  --background-secondary: #fffaf3;
+  --text-primary: #e0def4;
+  --text-secondary: #797593;
+  --accent: #c4a7e7;
+
+  --color-red: #eb6f92;
+  --color-yellow: #f6c177;
+  --color-orange: #ebbcba;
+  --color-green: #31748f;
+  --color-blue: #9ccfd8;
+  --color-purple: #c4a7e7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-primary: #191724;
+    --background-secondary: #fffaf3;
+    --text-primary: #e0def4;
+    --accent: #c4a7e7;
+
+    --color-red: #eb6f92;
+    --color-yellow: #f6c177;
+    --color-orange: #ebbcba;
+    --color-green: #31748f;
+    --color-blue: #9ccfd8;
+    --color-purple: #c4a7e7;
+  }
+}
