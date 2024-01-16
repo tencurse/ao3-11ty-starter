@@ -1,0 +1,19 @@
+---
+layout: workbase.njk
+---
+
+{% assign next_chapter = chapter_no | plus: 1 %}
+{% assign prev_chapter = chapter_no | minus: 1 %}
+{% assign work = collections.works | find: title %}
+{% assign chapter_total = work[0].data.current_chapter_count %}
+
+<section>
+  <h2 id="top"><a href="/works/{{ ao3_link | getWorkId }}/">{{ title }}</a></h2>
+  <h3>Chapter {{ chapter_no }}: {{ chapter_title }}</h2>
+  {% include "partials/workmetadata.liquid" %}
+</section>
+<hr>
+<section>
+  {{ content }}
+</section>
+{% include "partials/workfooter.liquid" %}
