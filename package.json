@@ -21,5 +21,8 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@grimlink/eleventy-plugin-lucide-icons": "^2.0.1"
   }
 }

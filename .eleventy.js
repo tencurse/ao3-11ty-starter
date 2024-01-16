@@ -1,4 +1,5 @@
 const markdownIt = require("markdown-it");
+const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
 
 module.exports = function (eleventyConfig) {
   let mdOptions = {
@@ -8,6 +9,13 @@ module.exports = function (eleventyConfig) {
   };
 
   eleventyConfig.setLibrary("md", markdownIt(mdOptions));
+
+  // PLUGINS
+
+  eleventyConfig.addPlugin(lucideIcons, {
+    "width": 16,
+    "height": 16
+  });
 
   // FILTERS
 
