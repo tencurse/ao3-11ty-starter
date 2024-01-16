@@ -23,6 +23,7 @@
     "@11ty/eleventy": "^2.0.1"
   },
   "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@grimlink/eleventy-plugin-lucide-icons": "^2.0.1"
   }
 }
