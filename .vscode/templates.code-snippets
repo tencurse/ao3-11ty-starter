@@ -1,0 +1,67 @@
+{
+  "One-shot fic template": {
+    "prefix": "fic-oneshot",
+    "description": "YML frontmatter for one-shot fics",
+    "body": [
+      "---",
+      "ao3_link: $1",
+      "title: \"$TM_FILENAME_BASE\"",
+      "fandom: [$2]",
+			"characters: [$3]",
+			"category: $4 # F/F, M/M, F/M, Multi, Other",
+			"tags: [$5]",
+			"summary: \"$6\"",
+			"start_note: \"$7\"",
+			"end_note: \"$8\"",
+			"content_rating: $9",
+			"content_warning: [$10]",
+			"status: $11 # In Progress, Completed, Abandoned",
+			"date_published: ${12:YYYY-MM-DD}",
+			"date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE # date updated or completed",
+			"word_count: $13 # no commas, just numbers",
+			"chapters: 1",
+      "---"
+    ]
+  },
+	"Multi-chapter fic template": {
+    "prefix": "fic-multi",
+    "description": "YML frontmatter for multi-chapter fics",
+    "body": [
+      "---",
+      "ao3_link: $1",
+      "title: \"$TM_FILENAME_BASE\"",
+      "fandom: [$2]",
+			"characters: [$3]",
+			"category: $4 # F/F, M/M, F/M, Multi, Other",
+			"tags: [$5]",
+			"summary: \"$6\"",
+			"start_note: \"$7\"",
+			"end_note: \"$8\"",
+			"content_rating: $9",
+			"content_warning: [$10]",
+			"status: $11 # In Progress, Completed, Abandoned",
+			"date_published: ${12:YYYY-MM-DD}",
+			"date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE # date updated or completed",
+			"word_count: $13 # no commas, just numbers",
+			"chapters: $14 # total chapter count",
+			"current_chapter_count: $15 # current available chapters"
+      "---"
+    ]
+  },
+	"Individual chapter template": {
+    "prefix": "fic-chapter",
+    "description": "YML frontmatter for individual chapters",
+    "body": [
+      "---",
+      "ao3_link: $1",
+      "title: ${TM_FILENAME_BASE/^(.*?)- Chapter.*/$1/}",
+			"date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE # date published",
+			"word_count: $2 # no commas, just numbers",
+			"chapter_no: ${TM_FILENAME_BASE/.*[^\\d](\\d+)$/$1/}",
+			"summary: \"$3\"",
+			"start_note: \"$4\"",
+			"end_note: \"$5\"",
+      "---"
+    ]
+  },
+}
