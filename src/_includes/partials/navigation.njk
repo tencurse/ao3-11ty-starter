@@ -1,0 +1,10 @@
+<header>
+  <h1>{{ metadata.site_title }}</h1>
+  <nav>
+    <ul>
+      <li><a href="/" class="{{ 'active' if page.url == '/' }}">home</a></li>
+      <li><a href="/works" class="{{ 'active' if page.url == '/works' }}">works</a></li>
+      <li><a href="{{ metadata.ao3_link }}">ao3</a></li>
+    </ul>
+  </nav>
+</header>
