@@ -3,6 +3,7 @@ ao3_link: https://archiveofourown.org/works/48665221
 title: "A Gentleman Strikes in Broad Daylight"
 fandom: [Genshin Impact]
 characters: [Childe, Lumine]
+relationships: [Childe/Lumine]
 category: F/M
 tags: [Fluff]
 summary: "Get in, filch the supplies from the Fatui, and get out. That’s all she needs to do. Lumine has done this commission a thousand times before. Surely, nothing will go wrong, right? Surely, a certain Fatui Harbinger won’t get in her way and compromise her mission, right?"
