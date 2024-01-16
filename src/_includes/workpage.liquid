@@ -1,0 +1,35 @@
+---
+layout: workbase.njk
+---
+<section>
+  <h2 id="top">{{ title }}</h2>
+  {% include "partials/workmetadata.liquid" %}
+</section>
+<hr>
+<section>
+  {% if chapters == 1%}
+  {{ content }}
+  {% elsif chapters > 1 or current_chapter_count > 1 %}
+  <h3>Chapter index</h3>
+  <ol class="index">
+    {% if chapters %}
+    {% for i in (1..chapters) %}
+    <li>
+      {%if i <= current_chapter_count %}
+      <a href="/works/{{ ao3_link | getWorkId }}/chapter-{{ i }}">
+      {% endif %}
+      Chapter {{ i }}
+      {%if i <= current_chapter_count %}</a>{% endif %}
+    </li>
+    {% endfor %}
+    {% else %}
+    {% for i in (1..current_chapter_count) %}
+    <li>
+      <a href="/works/{{ ao3_link | getWorkId }}/chapter-{{ i }}">Chapter {{ i }}</a>
+    </li>
+    {% endfor %}
+    {% endif %}
+  </ol>
+  {% endif %}
+</section>
+{% include "partials/workfooter.liquid" %}
