@@ -15,7 +15,7 @@ layout: base.njk
 <p><b class="text-small text-uppercase">CATEGORY</b> {{ work.data.category }}</p>
 {% if work.data.relationships and work.data.relationships.size >= 1 %}<p><b class="text-small text-uppercase">RELATIONSHIPS</b>  {% for s in work.data.relationships %}{{ s }}{% if s != work.data.relationships.last%}, {% endif %}{%endfor%}</p>{% endif %}
 {% if work.data.characters and work.data.characters.size >= 1 %}<p><b class="text-small text-uppercase">CHARACTERS</b>  {% for c in work.data.characters %}{{ c }}{% if c != work.data.characters.last%}, {% endif %}{%endfor%}</p>{% endif %}
-{% if work.data.other_tags and work.data.other_tags.size >= 1 %}<p><b class="text-small text-uppercase">TAGS</b>  {% for t in work.data.other_tags %}{{ t }}{% if t != work.data.other_tags.last%}, {% endif %}{%endfor%}</p>{% endif %}
+{% if work.data.tags and work.data.tags.size >= 2 %}<p><b class="text-small text-uppercase">TAGS</b>  {% for t in work.data.tags %}{% if t != 'works' %}{{ t }}{% if t != work.data.tags.last%}, {% endif %}{% endif %}{%endfor%}</p>{% endif %}
 {% endif %}
 <p><b class="text-small text-uppercase">WORD COUNT</b> {{ work.data.word_count | formatNum }}</p>
 <p><b class="text-small text-uppercase">PUBLISHED</b> {{ work.data.date_published | toUTC }}</p>
