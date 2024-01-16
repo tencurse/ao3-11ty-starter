@@ -103,8 +103,8 @@ If you’re using [VS Code](https://code.visualstudio.com/), then you’re in lu
 1. Create the work file: `{title}.md` inside the `works` folder
 2. Press `Ctrl` + `Shift` + `P`. A dialog box will appear.
 3. Type: `Insert snippet`. An option “Snippets: Insert snippet” should be highlighted
-4. Choose the template you want to insert: `fic-oneshot` for one-shots, `fic-multi` for multi-chapter works, `fic-chapter` for individual chapter pages.
-5. Press `Tab` after entering the value you want to go to the next property, or press `Esc` to manually enter the data.
+4. Choose the template you want to insert: `fic-oneshot` for one-shots, `fic-multi` for multi-chapter works, `fic-chapter` for individual chapter pages
+5. Press `Tab` to go to the next property, or press `Esc` to manually enter the data
 
 Otherwise, I’ve added a `templates` folder with the frontmatter data so you can simply copy-paste it if that suits you better.
 
@@ -166,6 +166,6 @@ If the work is in progress and the total chapter count is not provided, the chap
 - **Restart NPM:** Press `Ctrl` + `C` in the terminal to stop the live update, then enter `npm start` to start it up again.
 - **Regenerate the static files:** Delete the `public` folder. Make any change in any file (or simply `Ctrl` + `S`) to re-generate the files.
 
-Need more help? Feel free to send me an [email](mailto:10kph@proton.me) with your question and include a link to your Github (or other remote) repository in the e-mail. Please also read [this](http://www.catb.org/esr/faqs/smart-questions.html#before) before sending an e-mail.
+Need help? Feel free to send me an [email](mailto:10kph@proton.me) with your question and include a link to your Github (or other remote) repository in the e-mail. Please also read [this](http://www.catb.org/esr/faqs/smart-questions.html#before) before sending an e-mail.
 
 Got feedback on how to improve this project? Found a bug? Open an issue on the [repository](https://github.com/tencurse/ao3-11ty-starter/issues).
