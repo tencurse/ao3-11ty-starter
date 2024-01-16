@@ -118,7 +118,7 @@ svg {
 
 ul li:not(nav ul li),
 ol li:not(ol.index li) {
-  margin-inline-start: 1rem;
+  margin-inline-start: 1.5rem;
 }
 
 ol:not(ol.index li) {
