@@ -26,7 +26,7 @@
   <main>
     <article>
       <!-- MAIN CONTENT -->
-      <h2>{{ title }}</h2>
+      {% if page.url != '/' %}<h2>{{ title }}</h2>{% endif %}
       {{ content | safe }}
     </article>
   </main>
