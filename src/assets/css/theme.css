@@ -2,9 +2,9 @@
 html[data-theme="light"] {
   --background-primary: #eff1f5;
   --background-secondary: #ccd0da;
-  --text-primary: #4c4f69;
-  --text-secondary: #6c6f85;
-  --accent: #1e66f5;
+  --text-primary: #1e1e2e;
+  --text-secondary: #4c4f69;
+  --accent: #0043c7;
 
   --color-red: #d20f39;
   --color-yellow: #df8e1d;
@@ -18,9 +18,9 @@ html[data-theme="light"] {
   :root {
     --background-primary: #eff1f5;
     --background-secondary: #ccd0da;
-    --text-primary: #4c4f69;
-    --text-secondary: #6c6f85;
-    --accent: #1e66f5;
+    --text-primary: #1e1e2e;
+    --text-secondary: #4c4f69;
+    --accent: #0043c7;
 
     --color-red: #d20f39;
     --color-yellow: #df8e1d;
