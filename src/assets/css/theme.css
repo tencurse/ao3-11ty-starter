@@ -1,7 +1,8 @@
 /* LIGHT THEME */
 html[data-theme="light"] {
   --background-primary: #eff1f5;
-  --background-secondary: #ccd0da;
+  --background-secondary: #dce0e8;
+  --background-tertiary: #cbcfd9;
   --text-primary: #1e1e2e;
   --text-secondary: #4c4f69;
   --accent: #0043c7;
@@ -12,12 +13,29 @@ html[data-theme="light"] {
   --color-green: #40a02b;
   --color-blue: #1e66f5;
   --color-purple: #8839ef;
+
+  .key, .punctuation {
+    color: var(--color-purple);
+  }
+
+  .string {
+    color: var(--color-green);
+  }
+
+  .datetime, .number {
+    color: var(--color-orange);
+  }
+
+  .comment {
+    color: var(--text-secondary);
+  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --background-primary: #eff1f5;
-    --background-secondary: #ccd0da;
+    --background-secondary: #dce0e8;
+    --background-tertiary: #cbcfd9;
     --text-primary: #1e1e2e;
     --text-secondary: #4c4f69;
     --accent: #0043c7;
@@ -29,13 +47,30 @@ html[data-theme="light"] {
     --color-blue: #1e66f5;
     --color-purple: #8839ef;
   }
+
+  .key, .punctuation {
+    color: var(--color-purple);
+  }
+
+  .string {
+    color: var(--color-green);
+  }
+
+  .datetime, .number {
+    color: var(--color-orange);
+  }
+
+  .comment {
+    color: var(--text-secondary);
+  }
 }
 
 /* DARK THEME */
 
 html[data-theme="dark"] {
   --background-primary: #1e1e2e;
-  --background-secondary: #303143;
+  --background-secondary: #11111b;
+  --background-tertiary: #313244;
   --text-primary: #cdd6f4;
   --text-secondary: #a6adc8;
   --accent: #89b4fa;
@@ -46,12 +81,29 @@ html[data-theme="dark"] {
   --color-green: #a6e3a1;
   --color-blue: #88b3f9;
   --color-purple: #caa5f6;
+
+  .key, .punctuation {
+    color: var(--color-purple);
+  }
+
+  .string {
+    color: var(--color-green);
+  }
+
+  .datetime, .number {
+    color: var(--color-orange);
+  }
+
+  .comment {
+    color: var(--text-secondary);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-primary: #1e1e2e;
-    --background-secondary: #303143;
+    --background-secondary: #11111b;
+    --background-tertiary: #313244;
     --text-primary: #cdd6f4;
     --text-secondary: #a6adc8;
     --accent: #89b4fa;
@@ -62,5 +114,21 @@ html[data-theme="dark"] {
     --color-green: #a6e3a1;
     --color-blue: #88b3f9;
     --color-purple: #caa5f6;
+  }
+
+  .key, .punctuation {
+    color: var(--color-purple);
+  }
+
+  .string {
+    color: var(--color-green);
+  }
+
+  .datetime, .number {
+    color: var(--color-orange);
+  }
+
+  .comment {
+    color: var(--text-secondary);
   }
 }
