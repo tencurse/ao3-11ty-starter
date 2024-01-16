@@ -1,7 +1,7 @@
 {
   "ao3_username": "symmetra",
   "ao3_link": "https://archiveofourown.org/users/symmetra",
-  "site_title": "symmetra’s fic archive",
-  "site_description": "An archive of transformative works written under the pseudonym symmetra.",
+  "site_title": "AO3 11ty Starter",
+  "site_description": "An 11ty starter template for creating your own fic archive",
   "pagination": 20
 }
