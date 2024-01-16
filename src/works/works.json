@@ -1,0 +1,5 @@
+{
+  "layout": "workpage.liquid",
+  "permalink": "/works/{{ ao3_link | getWorkId }}/",
+  "tags": "works"
+}
