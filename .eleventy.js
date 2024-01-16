@@ -40,6 +40,11 @@ module.exports = function (eleventyConfig) {
     return collection.filter(work => work.data.title === slug);
   });
 
+  eleventyConfig.addFilter("getWorkId", function (url) {
+    const workId = url.match(/\/works\/(\d+)/);
+    return workId[1];
+  });
+
   // PASSTHROUGH
 
   eleventyConfig.addPassthroughCopy("./src/assets/css");
