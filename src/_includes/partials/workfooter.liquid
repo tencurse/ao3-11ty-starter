@@ -1,0 +1,17 @@
+<section>
+  {% if end_note and end_note != "" %}
+  <p id="#endnote"><b class="text-small text-uppercase">NOTES</b></p>
+  <blockquote>{{ end_note }}</blockquote>
+  {% endif %}
+  {% if chapters == 1 or chapter_no %}
+  <hr>
+  <p class="text-small">If you liked this work, consider leaving kudos or a comment on <a href="{{ ao3_link }}">AO3</a>.</p>
+  {% endif %}
+</section>
+{% if chapter_no %}
+<section class="text-small text-uppercase text-center">
+  {% if chapter_no != 1 %}<a href="/works/{{ ao3_link | getWorkId }}/chapter-{{ prev_chapter }}">← Previous chapter</a> {% lucide "dot" %} {% endif %}
+  {% if chapter_total > 1 %}<a href="/works/{{ ao3_link | getWorkId }}">Chapter index</a>{% endif %}
+  {% if chapter_no != chapter_total %}{% lucide "dot" %} <a href="/works/{{ ao3_link | getWorkId }}/chapter-{{ next_chapter }}">Next chapter →</a>{% endif %}
+</section>
+{% endif %}
