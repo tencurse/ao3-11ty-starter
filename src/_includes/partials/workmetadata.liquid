@@ -5,7 +5,7 @@
 <p><b class="text-small text-uppercase">CATEGORY</b> {{ category }}</p>
 {% if relationships and relationships.size >= 1 %}<p><b class="text-small text-uppercase">RELATIONSHIPS</b>  {% for s in relationships %}{{ s }}{% if s != relationships.last%}, {% endif %}{%endfor%}</p>{% endif %}
 {% if characters and characters.size >= 1 %}<p><b class="text-small text-uppercase">CHARACTERS</b>  {% for c in characters %}{{ c }}{% if c != characters.last%}, {% endif %}{%endfor%}</p>{% endif %}
-{% if other_tags and other_tags.size >= 1 %}<p><b class="text-small text-uppercase">TAGS</b>  {% for t in other_tags %}{{ t }}{% if t != other_tags.last%}, {% endif %}{%endfor%}</p>{% endif %}
+{% if tags and tags.size >= 2 %}<p><b class="text-small text-uppercase">TAGS</b>  {% for t in tags %}{% if t != 'works' %}{{ t }}{% if t != tags.last%}, {% endif %}{% endif %}{%endfor%}</p>{% endif %}
 {% endif %}
 <p><b class="text-small text-uppercase">WORD COUNT</b> {{ word_count | formatNum }}</p>
 <p><b class="text-small text-uppercase">PUBLISHED</b> {% if chapters or current_chapter_count %}{{ date_published | toUTC }}{% else %} {{ date | toUTC }}{% endif %}</p>

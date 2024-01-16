@@ -4,7 +4,7 @@ title: "A Gentleman Strikes in Broad Daylight"
 fandom: [Genshin Impact]
 characters: [Childe, Lumine]
 category: F/M
-other_tags: [Fluff]
+tags: [Fluff]
 summary: "Get in, filch the supplies from the Fatui, and get out. That’s all she needs to do. Lumine has done this commission a thousand times before. Surely, nothing will go wrong, right? Surely, a certain Fatui Harbinger won’t get in her way and compromise her mission, right?"
 content_rating: Teen and Up
 content_warning: [No Archive Warnings Apply]

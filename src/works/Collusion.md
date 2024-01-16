@@ -5,7 +5,7 @@ fandom: [Genshin Impact]
 characters: [Childe, Lumine]
 relationships: [Childe/Lumine]
 category: F/M # F/F, M/M, F/M, Multi, Other
-other_tags: [Slow Burn, Enemies to Lovers, Modern AU, Assassin AU]
+tags: [Slow Burn, Enemies to Lovers, Modern AU, Assassin AU]
 summary: "Childe is an assassin, part of a secret international organization.
 <br/><br/>
 Lumine is a secret agent in Mondstadt's Knights of Favonius.
