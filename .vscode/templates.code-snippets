@@ -58,9 +58,10 @@
 			"date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE # date published",
 			"word_count: $2 # no commas, just numbers",
 			"chapter_no: ${TM_FILENAME_BASE/.*[^\\d](\\d+)$/$1/}",
-			"summary: \"$3\"",
-			"start_note: \"$4\"",
-			"end_note: \"$5\"",
+			"chapter_title: $3",
+			"summary: \"$4\"",
+			"start_note: \"$5\"",
+			"end_note: \"$6\"",
       "---"
     ]
   },
