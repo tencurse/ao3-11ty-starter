@@ -22,9 +22,7 @@ body {
   margin: 2rem auto;
 }
 
-header,
-main,
-footer {
+main {
   width: 80%;
 }
 
@@ -36,6 +34,7 @@ header,
 footer {
   text-align: center;
   margin: 3rem auto;
+  width: 90%;
 }
 
 nav ul {
@@ -59,7 +58,7 @@ h1,
 h2,
 h3 {
   line-height: 1;
-  margin-block-end: 1.5rem;
+  margin-block: 1.5rem;
   text-align: center;
 }
 
@@ -117,8 +116,34 @@ svg {
   margin-block-end: 3px;
 }
 
-ul li:not(nav ul li) {
+ul li:not(nav ul li),
+ol li:not(ol.index li) {
   margin-inline-start: 1rem;
+}
+
+ol:not(ol.index li) {
+  margin-block: 1rem;
+}
+
+code, pre {
+  font-family: monospace;
+  font-size: 0.75rem;
+  background-color: var(--background-secondary);
+  border-radius: 4px;
+}
+
+code {
+  padding: 0 5px;
+  margin: 0 2px;
+}
+
+pre {
+  padding: 1rem;
+}
+
+pre > code {
+  margin: 0;
+  padding: 0;
 }
 
 /* UTILITY CLASSES */
