@@ -1,0 +1,23 @@
+{% if chapters or current_chapter_count %}
+<p><b class="text-small text-uppercase">CONTENT RATING</b> {{ content_rating }}</p>
+<p><b class="text-small text-uppercase">CONTENT WARNING</b> {% for w in content_warning %}{{ w }}{% if w != content_warning.last%}, {% endif %}{%endfor%}</p>
+<p><b class="text-small text-uppercase">FANDOM</b> {{ fandom }}</p>
+<p><b class="text-small text-uppercase">CATEGORY</b> {{ category }}</p>
+{% if relationships and relationships.size >= 1 %}<p><b class="text-small text-uppercase">RELATIONSHIPS</b>  {% for s in relationships %}{{ s }}{% if s != relationships.last%}, {% endif %}{%endfor%}</p>{% endif %}
+{% if characters and characters.size >= 1 %}<p><b class="text-small text-uppercase">CHARACTERS</b>  {% for c in characters %}{{ c }}{% if c != characters.last%}, {% endif %}{%endfor%}</p>{% endif %}
+{% if other_tags and other_tags.size >= 1 %}<p><b class="text-small text-uppercase">TAGS</b>  {% for t in other_tags %}{{ t }}{% if t != other_tags.last%}, {% endif %}{%endfor%}</p>{% endif %}
+{% endif %}
+<p><b class="text-small text-uppercase">WORD COUNT</b> {{ word_count | formatNum }}</p>
+<p><b class="text-small text-uppercase">PUBLISHED</b> {% if chapters or current_chapter_count %}{{ date_published | toUTC }}{% else %} {{ date | toUTC }}{% endif %}</p>
+{% if chapters or current_chapter_count %}<p><b class="text-small text-uppercase">{% if status == 'Completed' %}COMPLETED{% elsif status == 'In Progress' %}UPDATED{% endif %}</b> {{ date | toUTC }}</p>{% endif %}
+{% if summary and summary != "" %}
+<p><b class="text-small text-uppercase">SUMMARY</b></p>
+<blockquote>{{ summary }}</blockquote>
+{% endif %}
+{% if start_note and start_note != "" %}
+<p><b class="text-small text-uppercase">NOTES</b></p>
+<blockquote>{{ start_note }}</blockquote>
+{% endif %}
+{% if end_note and end_note != "" %}
+<p class="text-small">See the end of the work for <a href="#endnote">more notes</a>.</p>
+{% endif %}
