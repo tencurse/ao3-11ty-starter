@@ -8,7 +8,7 @@ layout: workbase.njk
 {% assign chapter_total = work[0].data.current_chapter_count %}
 
 <section>
-  <h2 id="top"><a href="/works/{{ ao3_link | getWorkId }}/">{{ title }}</a></h2>
+  <h2><a href="/works/{{ ao3_link | getWorkId }}/">{{ title }}</a></h2>
   <h3>Chapter {{ chapter_no }}: {{ chapter_title }}</h2>
   {% include "partials/workmetadata.liquid" %}
 </section>
