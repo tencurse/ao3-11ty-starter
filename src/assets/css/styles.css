@@ -24,9 +24,6 @@ body {
 
 main {
   width: 80%;
-}
-
-main {
   margin: 2rem auto;
 }
 
@@ -41,8 +38,7 @@ nav ul {
   list-style: none;
   list-style-type: none;
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: space-evenly;
   font-family: "DM Sans";
 }
 
@@ -80,6 +76,11 @@ h3 {
   font-style: italic;
 }
 
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 a {
   color: var(--accent);
   text-decoration-style: dotted;
@@ -101,13 +102,14 @@ p {
 
 blockquote {
   margin-inline: 1rem;
-  border-inline-start: 1px solid var(--background-secondary);
+  border-inline-start: 1px solid var(--background-tertiary);
   padding-inline-start: 1rem;
   color: var(--text-secondary);
+  font-size: 0.9rem
 }
 
 hr {
-  color: var(--background-secondary);
+  color: var(--background-tertiary);
   margin: 2rem 0;
 }
 
@@ -125,7 +127,8 @@ ol:not(ol.index li) {
   margin-block: 1rem;
 }
 
-code, pre {
+code,
+pre {
   font-family: monospace;
   font-size: 0.75rem;
   background-color: var(--background-secondary);
@@ -135,6 +138,7 @@ code, pre {
 code {
   padding: 0 5px;
   margin: 0 2px;
+  display: inline-block;
 }
 
 pre {
@@ -145,6 +149,31 @@ pre {
 pre > code {
   margin: 0;
   padding: 0;
+}
+
+table {
+  margin: 1rem 0;
+  margin-inline-start: -0.5rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+th {
+  font-size: 0.7em;
+  font-family: "DM Sans";
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  vertical-align: middle;
+  background-color: var(--background-tertiary);
+}
+
+tr:nth-child(even) {
+  background-color: var(--background-tertiary);
+}
+
+td {
+  padding: 0.5rem;
 }
 
 /* UTILITY CLASSES */
@@ -162,12 +191,12 @@ pre > code {
   text-align: center;
 }
 
-ol.index {
+.index {
   list-style-type: none;
   counter-reset: item;
 }
 
-ol.index li {
+.index li {
   font-family: "DM Sans";
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -183,11 +212,39 @@ ol.index li::before {
   font-family: monospace;
 }
 
+ul.index li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin: 0;
+  text-align: left;
+  text-transform: none;
+}
+
+.work-details {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.work-details p {
+  margin: 0;
+  width: 50%;
+}
+
+.work-details p.full {
+  width: 100%;
+}
+
+.work-details p > b {
+  margin-inline-end: 0.5rem;
+}
+
 @media only screen and (min-width: 810px) {
   header,
   main,
   footer {
-    width: 60ch;
+    width: 70ch;
   }
 
   ol.index {
@@ -200,5 +257,14 @@ ol.index li::before {
     width: 33%;
     box-sizing: border-box;
     text-align: left;
+  }
+
+  ul.index {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  table {
+    margin: 1rem 0;
   }
 }
