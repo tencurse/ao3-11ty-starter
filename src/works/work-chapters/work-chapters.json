@@ -1,0 +1,5 @@
+{
+  "layout": "workchapter.liquid",
+  "permalink": "/works/{{ ao3_link | getWorkId }}/chapter-{{ chapter_no }}/",
+  "eleventyExcludeFromCollections": true
+}
