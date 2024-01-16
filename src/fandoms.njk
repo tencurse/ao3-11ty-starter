@@ -1,0 +1,13 @@
+---
+title: fandoms index
+layout: base.njk
+permalink: /fandoms/
+---
+
+<ul class="index">
+{% for tag in collections.works | getAllFandoms | sort %}
+  {% set taglist = collections.works | filterByFandom(tag) %}
+	{% set tagUrl %}/fandoms/{{ tag | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a> {{ taglist.length }}</li>
+{% endfor %}
+</ul>
