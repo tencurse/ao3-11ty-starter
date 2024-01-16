@@ -1,0 +1,83 @@
+/* Variables */
+:root {
+    --font-size: 1.25rem;
+}
+
+html {
+  font-family: 'Crimson Text', serif;
+  line-height: 1.5;
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--background-primary);
+}
+
+body {
+  margin: 2rem auto;
+}
+
+header, main, footer {
+  margin: 2rem auto;
+  width: 90%;
+}
+
+header, footer {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a.active {
+  text-decoration: none;
+}
+
+header h1 {
+  line-height: 0.8;
+  margin-block-end: 1.5rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-style: dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+@media only screen and (min-width: 810px) {
+  header, main, footer {
+    width: 520px;
+  }
+}
