@@ -1,0 +1,13 @@
+---
+title: tags index
+layout: base.njk
+permalink: /tags/
+---
+
+<ul class="index">
+{% for tag in collections.all | getAllTags | filterTagList | sort %}
+  {% set taglist = collections.works | filterByTag(tag) %}
+	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a> {{ taglist.length }}</li>
+{% endfor %}
+</ul>
