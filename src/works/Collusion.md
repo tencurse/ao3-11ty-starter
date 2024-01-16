@@ -18,6 +18,6 @@ content_warning: [Graphic Depictions of Violence, Major Character Death]
 status: In Progress # In Progress, Completed, Abandoned
 date_published: 2020-07-18
 date: 2023-11-01 # date updated or completed
-word_count: 101010 # no commas, just numbers
+word_count: 46729 # no commas, just numbers
 current_chapter_count: 15 # current available chapters
 ---
