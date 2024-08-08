@@ -3,7 +3,7 @@
 <p><b class="text-small text-uppercase">CONTENT RATING</b> {{ content_rating }}</p>
 <p><b class="text-small text-uppercase">CATEGORY</b> {{ category }}</p>
 <p class="full"><b class="text-small text-uppercase">CONTENT WARNING</b> {% for w in content_warning %}{{ w }}{% if w != content_warning.last%}, {% endif %}{%endfor%}</p>
-<p><b class="text-small text-uppercase">FANDOM</b> <a href="/fandoms/{{ fandom | slugify }}">{{ fandom }}</a></p>
+<p class="full"><b class="text-small text-uppercase">FANDOM</b> <a href="/fandoms/{{ fandom | slugify }}">{{ fandom }}</a></p>
 {% if relationships and relationships.size >= 1 %}<p class="full"><b class="text-small text-uppercase">RELATIONSHIPS</b>  {% for s in relationships %}{{ s }}{% if s != relationships.last%}, {% endif %}{%endfor%}</p>{% endif %}
 {% if characters and characters.size >= 1 %}<p class="full"><b class="text-small text-uppercase">CHARACTERS</b>  {% for c in characters %}{{ c }}{% if c != characters.last%}, {% endif %}{%endfor%}</p>{% endif %}
 {% if tags and tags.size >= 2 %}<p class="full"><b class="text-small text-uppercase">TAGS</b>  {% for t in tags %}{% if t != 'works' %}<a href="/tags/{{ t | slugify }}">{{ t }}</a>{% if t != tags.last%}, {% endif %}{% endif %}{%endfor%}</p>{% endif %}
