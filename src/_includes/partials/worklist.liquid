@@ -16,12 +16,11 @@
 {% if work.data.summary and work.data.summary != "" %}
 <p><b class="text-small text-uppercase">SUMMARY</b></p>
 <blockquote><p>{{ work.data.summary }}</p></blockquote>
-
+{% endif %}
 <div class="work-details">
 <p class="full"><b class="text-small text-uppercase">WORD COUNT</b> {{ work.data.word_count | formatNum }}</p>
 <p><b class="text-small text-uppercase">PUBLISHED</b> {{ work.data.date_published | toUTC }}</p>
 <p><b class="text-small text-uppercase">{% if work.data.status == 'Completed' %}COMPLETED{% elsif work.data.status == 'In Progress' %}UPDATED{% endif %}</b> {{ work.data.date | toUTC }}</p>
 </div>
-{% endif %}
 </section>
 <hr>
