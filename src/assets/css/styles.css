@@ -86,6 +86,20 @@ a {
   text-decoration-style: dotted;
 }
 
+a.button {
+  text-decoration: none;
+  padding: 4px 16px;
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  border: 1px var(--text-primary) solid;
+  box-shadow: 8px 8px #111;
+}
+
+a.button:active {
+  transform: scale(0.98);
+}
+
 b,
 strong {
   font-weight: bold;
@@ -118,13 +132,26 @@ svg {
   margin-block-end: 3px;
 }
 
-ul li:not(nav ul li),
+ul li:not(nav ul li, ul.pagination li, ul.index li),
 ol li:not(ol.index li) {
   margin-inline-start: 1.5rem;
 }
 
 ol:not(ol.index li) {
   margin-block: 1rem;
+}
+
+ul.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+ul.pagination li {
+  list-style: none;
+  text-transform: uppercase;
+  font-family: var(--font-small);
 }
 
 code,
