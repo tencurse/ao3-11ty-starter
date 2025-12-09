@@ -3,18 +3,14 @@ title: Adding Works
 layout: base.njk
 ---
 
-# Adding Works
-
-This guide will walk you through adding your own works to the archive. There are two ways you can go about this: the Markdown way or the HTML way.
-
-## Quick overview
+There are two ways you can go about adding your own works to the archive: the Markdown way or the HTML way.
 
 1. Create a file in `src/works/` named `{title}.md` or `{title}.html`
 2. Add frontmatter data at the top of the file
 3. Add the work content below the frontmatter
 4. Save and check the result in your browser
 
-## Using VS Code snippets
+### Using VS Code snippets
 
 If you're using [VS Code](https://code.visualstudio.com/), you can use snippets to automatically insert the frontmatter data:
 
@@ -27,15 +23,15 @@ If you're using [VS Code](https://code.visualstudio.com/), you can use snippets 
 
 Certain values like `title` and `date` will be automatically filled in for you. The `date` properties will have the current date as default. You can update these values later.
 
-## Using templates
+### Using templates
 
 If you're not using VS Code, there's a `src/templates/` folder with files containing the frontmatter data. Simply copy-paste from `fic-oneshot.md` into your new work file.
 
-## Method 1: The HTML way
+### Method 1: The HTML way
 
 This method is straightforward if you want to preserve the exact formatting from AO3.
 
-### Steps
+#### Steps
 
 1. **Download the HTML file** from the AO3 work page (there's a download button on every work)
 2. **Open the HTML file** in a text editor
@@ -46,19 +42,19 @@ This method is straightforward if you want to preserve the exact formatting from
 7. **Paste the content** below the frontmatter
 8. **Fill out the frontmatter values** (see [Frontmatter Reference](FRONTMATTER-REFERENCE.md))
 
-### Example
+#### Example
 
 An example work page that uses HTML formatting can be found at [/works/51731500](/works/51731500). The source file is `src/works/if he had a hundred years.html`.
 
-### Note about formatting
+#### Note about formatting
 
 If your work has double paragraph spacing on AO3, it'll show up that way in the static files too. This is why the Markdown method is recommended—you don't have to worry about deleting extra `<p>` tags and other extraneous whitespace.
 
-## Method 2: The Markdown way (recommended)
+### Method 2: The Markdown way (recommended)
 
 This method gives you cleaner, more maintainable files.
 
-### Steps
+#### Steps
 
 1. **Download the HTML file** from the AO3 work page
 2. **Open the HTML file** in a text editor
@@ -73,11 +69,11 @@ This method gives you cleaner, more maintainable files.
 
 You can also copy-paste straight from the AO3 web page into Typora or any Markdown editor you have. Most Markdown editors will automatically convert the HTML to Markdown.
 
-### Example
+#### Example
 
 An example work page that uses Markdown formatting can be found at [/works/48665221](/works/48665221). The source file is `src/works/A Gentleman Strikes in Broad Daylight.md`.
 
-## Mixing HTML and Markdown
+### Mixing HTML and Markdown
 
 You can have a mix of HTML and Markdown files in the `src/works/` folder:
 
@@ -90,7 +86,7 @@ src/works/
 
 This setup works fine, as long as the frontmatter data is present in all files.
 
-## Sample frontmatter for one-shots
+### Sample frontmatter for one-shots
 
 Here's what the frontmatter looks like for a one-shot work:
 
@@ -118,9 +114,9 @@ chapters: 1
 
 For a complete explanation of each field, see the [Frontmatter Reference](/docs/FRONTMATTER-REFERENCE/).
 
-## Important notes
+### Important notes
 
-### Required fields
+#### Required fields
 
 Make sure you fill out all required fields (marked with * in the reference):
 - `ao3_link`
@@ -134,16 +130,12 @@ Make sure you fill out all required fields (marked with * in the reference):
 - `word_count`
 - `chapters` (should be `1` for one-shots)
 
-### Special characters
-
 For text with special characters, wrap the text with quotation marks "" (**not** these: “”), like so:
 
 ```yml
 fandom: ["Genshin Impact (Video Game)"]
 summary: "She said, \"Hello, world!\""
 ```
-
-### Consistency matters
 
 Make sure the values in these properties are consistent throughout all your works:
 - `fandom`
@@ -153,7 +145,7 @@ Make sure the values in these properties are consistent throughout all your work
 
 That means the values should have the same formatting and spelling so that the index pages will work. A character tagged `Tartaglia | Childe` in one work and `Childe` in another will list the works in different character pages. (No AO3 tag wrangling magic here, sorry!)
 
-## Next steps
+### Next steps
 
 - **[Multi-Chapter Works](/docs/MULTI-CHAPTER-WORKS/)** - Learn how to add multi-chapter fics
 - **[Frontmatter Reference](/docs/FRONTMATTER-REFERENCE/)** - Complete field documentation

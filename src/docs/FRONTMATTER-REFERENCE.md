@@ -3,11 +3,9 @@ title: Frontmatter Reference
 layout: base.njk
 ---
 
-# Frontmatter Reference
-
 This is a comprehensive reference for all frontmatter fields used in work and chapter files.
 
-## What is frontmatter?
+### What is frontmatter?
 
 Frontmatter is the metadata at the top of each file that looks like this:
 
@@ -20,11 +18,11 @@ layout: base.njk
 
 The frontmatter is where metadata of the file/page are stored. For works and chapters, the frontmatter is structured to mirror AO3’s metadata fields.
 
-## Work frontmatter
+### Work frontmatter
 
 This applies to files in `src/works/` (both one-shots and multi-chapter works).
 
-### Complete example
+#### Complete example
 
 ```yml
 ---
@@ -55,7 +53,7 @@ current_chapter_count: 1
 ---
 ```
 
-### Field reference
+#### Field reference
 
 | Field | Required | Type | Description |
 |-------|----------|------|-------------|
@@ -81,8 +79,6 @@ current_chapter_count: 1
 \* Required for one-shots. Optional for multi-chapter works if `current_chapter_count` is provided.
 
 \** Required for multi-chapter works. Not needed for one-shots.
-
-### Special notes
 
 #### One-shots
 
@@ -163,11 +159,11 @@ start_note: "Written for <a href='https://example.com'>Fic Fest 2023</a>."
 
 However, using the pipe symbol with Markdown is generally easier to read and write.
 
-## Chapter frontmatter
+### Chapter frontmatter
 
 This applies to files in `src/works/work-chapters/`.
 
-### Complete example
+#### Complete example
 
 ```yml
 ---
@@ -183,7 +179,7 @@ end_note: ""
 ---
 ```
 
-### Field reference
+#### Field reference
 
 | Field | Required | Type | Description |
 |-------|----------|------|-------------|
@@ -223,7 +219,7 @@ Chapter files must follow the naming convention:
 
 When using VS Code snippets, the `title` and `chapter_no` are automatically extracted from the filename.
 
-## Consistency guidelines
+### Consistency guidelines
 
 Make sure the values in these properties are consistent throughout all your works:
 
@@ -234,7 +230,7 @@ Make sure the values in these properties are consistent throughout all your work
 
 That means the values should have the same formatting and spelling so that the index pages will work correctly.
 
-### Examples of inconsistency
+#### Examples of inconsistency
 
 **Bad** (will create separate index pages):
 ```yml
@@ -256,7 +252,7 @@ characters: [Childe]
 
 The system generates index pages based on these values. If you tag a character as `Tartaglia | Childe` in one work and `Childe` in another, they'll appear on different character index pages. There’s no AO3 tag wrangling magic here—the system treats them as different values.
 
-## Next steps
+### Next steps
 
 - **[Adding Works](/docs/ADDING-WORKS/)** - Learn how to add works
 - **[Multi-Chapter Works](/docs/MULTI-CHAPTER-WORKS/)** - Learn about multi-chapter works

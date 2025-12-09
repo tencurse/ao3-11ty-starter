@@ -3,13 +3,11 @@ title: Deployment
 layout: base.njk
 ---
 
-# Deployment
-
 Once you’ve added your works and customized your archive, you’re ready to deploy it to the web. This guide covers two popular free hosting options: GitHub Pages and Neocities.
 
-## Before you deploy
+### Before you deploy
 
-### 1. Build your site
+#### 1. Build your site
 
 Run the build command to generate the production-ready static files:
 
@@ -19,7 +17,7 @@ npm run build
 
 This creates a `public/` folder with all your HTML, CSS, and assets.
 
-### 2. Test locally
+#### 2. Test locally
 
 Before deploying, make sure everything looks good:
 
@@ -33,7 +31,7 @@ Browse through your archive and check:
 - Tag and fandom indexes are complete
 - No broken links or missing images
 
-### 3. Clean up
+#### 3. Clean up
 
 If you want to remove the example works and guide:
 
@@ -44,16 +42,16 @@ If you want to remove the example works and guide:
 
 **Note:** The documentation files are included in the site by default so you can browse them locally while setting up. Once you’re comfortable with the workflow, you should hide or remove them before deploying your public archive.
 
-## Option 1: GitHub Pages
+### Option 1: GitHub Pages
 
 GitHub Pages is a free hosting service that works great with static sites.
 
-### Prerequisites
+#### Prerequisites
 
 - A GitHub account
 - Your project in a GitHub repository
 
-### Deployment steps
+#### Deployment steps
 
 Create a file `.github/workflows/deploy.yml`:
 
@@ -90,15 +88,13 @@ jobs:
 
 Now every time you push to the `main` branch, your site will automatically rebuild and deploy.
 
-## Option 2: Neocities
+### Option 2: Neocities
 
 Neocities is a free web hosting service with a nostalgic, indie web vibe.
 
-### Prerequisites
+#### Prerequisites
 
 - A Neocities account (free at [neocities.org](https://neocities.org))
-
-### Deployment steps
 
 #### Method A: Web interface
 
@@ -188,7 +184,7 @@ You can set up automatic deployment to Neocities using GitHub Actions, so your s
 
 Now every time you push to the `main` branch, your site will automatically rebuild and deploy to Neocities!
 
-## Other hosting options
+### Other hosting options
 
 This is a static site, so you can host it anywhere that serves HTML files:
 
@@ -197,8 +193,6 @@ This is a static site, so you can host it anywhere that serves HTML files:
 - **Cloudflare Pages** - Free tier with global CDN
 - **Your own server** - Just upload the `public/` folder
 
-## Next steps
+### Next steps
 
-- **[Troubleshooting](/docs/TROUBLESHOOTING/)** - More troubleshooting tips
-- Share your archive with friends!
-- Consider backing up your repository regularly
+- **[Troubleshooting](/docs/TROUBLESHOOTING/)** - More troubleshooting info

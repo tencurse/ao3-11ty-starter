@@ -3,9 +3,7 @@ title: Setup Guide
 layout: base.njk
 ---
 
-This guide will walk you through installing and configuring your AO3 archive.
-
-## Prerequisites
+### Prerequisites
 
 Before you begin, make sure you have:
 
@@ -13,9 +11,9 @@ Before you begin, make sure you have:
 - **A text editor** - [VS Code](https://code.visualstudio.com/) is recommended for snippet support
 - **Basic familiarity with the command line** - You’ll need to run a few commands
 
-## Installation
+### Installation
 
-### 1. Get the code
+#### 1. Get the code
 
 Clone this repository to your local machine:
 
@@ -26,7 +24,7 @@ cd ao3-11ty-starter
 
 Alternatively, you can download the ZIP file from GitHub and extract it.
 
-### 2. Install dependencies
+#### 2. Install dependencies
 
 Open a terminal in the project folder and run:
 
@@ -36,7 +34,7 @@ npm install
 
 This will download and install Eleventy and other required packages.
 
-### 3. Start the development server
+#### 3. Start the development server
 
 Run the following command:
 
@@ -48,9 +46,9 @@ You should see output indicating that Eleventy is running. Open your browser to 
 
 The development server includes live reload—any changes you make to files will automatically refresh in the browser.
 
-## Configuration
+### Configuration
 
-### Site metadata
+#### Site metadata
 
 Edit `src/_data/metadata.json` with your information:
 
@@ -72,11 +70,11 @@ Edit `src/_data/metadata.json` with your information:
 | `site_description`| A brief description for meta tags                |
 | `pagination`      | Number of items per page (currently unused)      |
 
-### Customize the home page
+#### Customize the home page
 
 Edit `src/index.md` to add your own introduction or welcome message. This file uses Markdown formatting.
 
-### Styling
+#### Styling
 
 CSS files are located in `src/assets/css/`:
 
@@ -86,7 +84,7 @@ CSS files are located in `src/assets/css/`:
 
 Feel free to modify these to match your preferred aesthetic.
 
-## Folder structure
+### Folder structure
 
 Here's what you need to know about the folder structure:
 
@@ -105,9 +103,9 @@ src/
 
 The `public/` folder is auto-generated and should be ignored. It contains the built static site.
 
-## File naming conventions
+### File naming conventions
 
-### Works
+#### Works
 
 Files in `src/works/` should be named after the work title:
 
@@ -120,7 +118,7 @@ src/works/
 
 You can use either `.md` (Markdown) or `.html` files.
 
-### Chapters
+#### Chapters
 
 Files in `src/works/work-chapters/` must follow this pattern:
 
@@ -139,7 +137,7 @@ src/works/work-chapters/
 
 The work title must match **exactly** with the parent work’s title for the chapter linking to work properly.
 
-## Next steps
+### Next steps
 
 Now that you’ve got everything set up, you’re ready to start adding your works!
 
@@ -147,6 +145,6 @@ Now that you’ve got everything set up, you’re ready to start adding your wor
 - **[Multi-Chapter Works](/docs/MULTI-CHAPTER-WORKS/)** - Learn how to add multi-chapter fics
 - **[Frontmatter Reference](/docs/FRONTMATTER-REFERENCE/)** - Complete field documentation
 
-## Troubleshooting
+### Troubleshooting
 
 If something isn’t working, check the [Troubleshooting guide](/docs/TROUBLESHOOTING/).
