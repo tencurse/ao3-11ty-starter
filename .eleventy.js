@@ -1,6 +1,7 @@
 const markdownIt = require("markdown-it");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
+const feedPlugin = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   let mdOptions = {
@@ -18,6 +19,8 @@ module.exports = function (eleventyConfig) {
     height: 16,
   });
 
+  eleventyConfig.addPlugin(feedPlugin);
+
   eleventyConfig.addPlugin(syntaxHighlight, {
     lineSeparator: "\n",
     preAttributes: {
@@ -31,6 +34,11 @@ module.exports = function (eleventyConfig) {
   });
 
   // FILTERS
+
+  const mdRender = new markdownIt({ html: true });
+  eleventyConfig.addFilter("renderUsingMarkdown", function (rawString) {
+    return mdRender.render(rawString);
+  });
 
   eleventyConfig.addFilter("toUTC", function (value) {
     return new Date(value).toLocaleDateString("en-CA", {

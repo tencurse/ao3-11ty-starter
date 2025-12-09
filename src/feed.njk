@@ -1,0 +1,29 @@
+---json
+{
+  "permalink": "feed.xml",
+  "eleventyExcludeFromCollections": true
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
+  <title>{{ metadata.site_title }}</title>
+  <subtitle>{{ metadata.site_description }}</subtitle>
+  <link href="{{ permalink | absoluteUrl(metadata.base) }}" rel="self"/>
+  <link href="{{ metadata.base }}"/>
+  <updated>{{ collections.works | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.base }}</id>
+  <author>
+    <name>{{ metadata.ao3_username }}</name>
+    <email>{{ metadata.email }}</email>
+  </author>
+  {%- for post in collections.works %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(metadata.base) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content xml:lang="{{ metadata.language }}" type="html">{{ post.data.summary | renderUsingMarkdown | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
