@@ -95,7 +95,7 @@ Found a bug? Have a suggestion? Open an issue on the [repository](https://github
 
 ## Support
 
-Need help? Read the [Troubleshooting guide](docs/TROUBLESHOOTING.md) or send an email to [10kph@proton.me](mailto:10kph@proton.me) with a link to your repository.
+Need help? Read the [Troubleshooting guide](docs/TROUBLESHOOTING.md) or send an email to [hi@karma.computer](mailto:hi@karma.computer) with a link to your repository.
 
 Please read [How To Ask Questions The Smart Way](http://www.catb.org/esr/faqs/smart-questions.html#before) before sending an email.
 
@@ -105,7 +105,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Credits
 
-Created by [Ten](https://10kph.neocities.org)
+Created by [Ten](https://karma.computer)
 
 ---
 
